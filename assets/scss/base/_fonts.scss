@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src:  url('../fonts/GothamPro/gothampro.ttf') ;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src:  url('../fonts/GothamPro/gothampro_black.ttf') ;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {font-size: 1.667em;}
+h2 {font-size: 1em;}
+h3 {font-size: .833em;}
+h4 {font-size: 0.75em;}
+h5 {font-size: 0.667em;}
+p {
+  font-size: 0.583em;
+  margin-bottom: .8em;
+}
+

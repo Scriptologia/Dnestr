@@ -1,0 +1,217 @@
+.slider {
+  &_item {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &_item_left {
+    @include lg {
+      margin-bottom:1em;
+    }
+  }
+  &_item_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include lg {
+      flex-direction: row;
+    }
+  }
+  .block_news_max {
+    border-radius: $radius2;
+    box-shadow: 0px 0px .5em rgba(32, 43, 72, 0.15);
+    width: 32.5em;
+    height: 18.08em;
+    display: flex;
+    & .image {
+      min-width: 19.91em;
+      height: 18.08em;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      & > .lable {
+        position: absolute;
+        background-color: $color-blue;
+        width: 85px;
+        height: 58px;
+        top: 0;
+        left: 0;
+        border-radius: $radius2 0 $radius2 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        &:after {
+          content: "";
+          right: -27px;
+          top: 0;
+          position: absolute;
+          border-top: 52px solid $color-blue;
+          border-right: 33px solid transparent;
+        }
+        & > time {
+          font-size: 14px;
+          line-height: 20px;
+          color: $color-main;
+        }
+      }
+    }
+    & .text {
+      padding: 1.25em 1.25em 1.25em .917em;
+      display: flex;
+      flex-direction: column;
+      & h4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      & p {
+        line-height: 1.4em;
+        flex: 1 0 auto;
+      }
+    }
+  }
+  .block_news_min {
+    border-radius: $radius2;
+    width:15.83em;
+    height:8.625em;
+    display: flex;
+    box-shadow: 0px 0px .5em rgba(32, 43, 72, 0.15);
+    & .image {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      overflow: hidden;
+      min-width:6.67em;
+      height:8.625em;
+      position: relative;
+      & > .lable {
+        position: absolute;
+        background-color: $color-blue;
+        width: 85px;
+        height: 58px;
+        top: 0;
+        left: 0;
+        border-radius: $radius2 0 $radius2 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        &:after {
+          content: "";
+          right: -27px;
+          top: 0;
+          position: absolute;
+          border-top: 52px solid $color-blue;
+          border-right: 33px solid transparent;
+        }
+        & > time {
+          font-size: 14px;
+          line-height: 20px;
+          color: $color-main;
+        }
+      }
+    }
+    & .text {
+      padding: .833em;
+      & h5 {
+        line-height: 1em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.25em;
+        margin-bottom: .7em;
+      }
+      & p {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+
+.slick-initialized .slick-slide.slider_item {
+  display: flex !important;
+}
+
+.slider, .slider-main {
+ &  .slick-dots1 {
+    display: flex;
+    justify-content: center;
+   padding: 1.5em;
+    & li {
+      margin: 0 .333em;
+      border-radius:50%;
+      width:12px;
+      height:12px;
+      background: $color-blue2 !important;
+      &.slick-active {
+        background: $color-blue !important;
+      }
+    }
+  }
+}
+
+.slick-slide {
+  margin: 0 .417em;
+}
+
+.slider-main {
+  &_item {
+    position: relative;
+    border-radius: $radius2;
+    & > img {
+      width: 100%;
+      height: 100%;
+      position:  absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    & > .lable {
+      z-index: 1;
+      position: absolute;
+      background-color: $color-blue;
+      width: 85px;
+      height: 58px;
+      top: 0;
+      left: 0;
+      border-radius: $radius2 0 $radius2 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      &:after {
+        content: "";
+        right: -27px;
+        top: 0;
+        position: absolute;
+        border-top: 52px solid $color-blue;
+        border-right: 33px solid transparent;
+      }
+      & > time {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-main;
+      }
+    }
+  }
+  & > .slick-dots1 {
+    position: absolute;
+    bottom: 0.833em;
+    left: 0;
+    right: 0;
+    padding-bottom:0;
+  }
+}

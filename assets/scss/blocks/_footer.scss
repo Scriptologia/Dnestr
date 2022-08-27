@@ -1,0 +1,190 @@
+footer {
+  flex: 0 0 auto;
+  box-shadow: $shadow;
+ & .menu {
+
+    &-footer {
+      display: flex;
+      @include exlg{
+        flex-wrap: wrap;
+      }
+      & .menu-central-block {
+        box-shadow: $shadow2;
+        flex: 1 0 auto;
+        height: 115px;
+        @include exlg{
+          width:100%;
+          order:3;
+        }
+        &  .menu-items {
+          min-height: 50%;
+          flex: 1 0 auto;
+          background: $color-main;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          padding-left: 75px;
+          padding-right: 75px;
+          &_list {
+            display: flex;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            @include exlg{
+              display: flex;
+              flex-wrap: wrap;
+          }
+            & li {
+              margin: 1em;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 13px;
+              text-transform: uppercase;
+              color:$main-font-color;
+              box-sizing: border-box;
+              border-bottom: 1px dashed transparent;
+              &:hover, &.active {
+                border-bottom: 1px dashed $main-font-color;
+              }
+            }
+          }
+        }
+        & .info {
+          height: 50%;
+          color:$color-main;
+          background: $color-blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &_data {
+            width: 27%;
+            text-align: right;
+            @include sd {
+              width:100%;
+              text-align: center;
+            }
+          }
+          &_rights {
+            text-transform: uppercase;
+            font-weight: 400;
+            width: 25%;
+            text-align: left;
+            @include sd {
+              width:100%;
+              text-align: center;
+            }
+          }
+          & > hr {
+            color:$color-main;
+            margin-left: 1em;
+            margin-right: 1em;
+            height: 1.25em;
+            border: 1px solid $color-main;
+            @include sd {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .restangle-footer {
+    background: $color-main;
+    height: 115px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include exlg{
+      width:50%;
+    }
+    @include md{
+      width:100%;
+    }
+    &-left {
+      flex-direction: column;
+      border-radius: $radius 0 0 0;
+      padding: 14px 14px 14px 14px;
+      box-shadow: -12px 0px 16px rgb(32 43 72 / 3%);
+      @include exlg{
+        order:2;
+        box-shadow: unset;
+        border: none;
+        border-radius: unset;
+      }
+      &:before {
+        content: "";
+        left: -61px;
+        top: 0;
+        position: absolute;
+        border-top: 115px solid transparent;
+        border-right: 75px solid $color-main;
+        @include exlg {
+          content: unset;
+        }
+      }
+    }
+    &-right {
+      border-radius: 0 $radius 0 0;
+      padding: 14px 0 14px 14px;
+      box-shadow: 12px 0px 16px rgb(32 43 72 / 3%);
+      @include exlg{
+        order:1;
+        box-shadow: unset;
+        border: none;
+        border-radius: unset;
+        text-align: center;
+      }
+      &:before {
+        content: "";
+        right: -61px;
+        top: 0;
+        position: absolute;
+        border-top: 115px solid transparent;
+        border-left: 75px solid $color-main ;
+        border-top-left-radius: $radius;
+        @include exlg {
+          content: unset;
+        }
+      }
+      & h5 {
+        line-height: 2.7em;
+        text-transform: uppercase;
+      }
+    }
+    & > .block {
+      &-icons, &-button {
+        height: 50%;
+        @include exlg {
+          align-self: center;
+        }
+      }
+      &-icons{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include exlg {
+          justify-content: space-evenly;
+        }
+        & > a {
+          display: inline-block;
+          width:24px;
+          height:24px;
+          &:hover  i {
+            background-color: $color-yellow;
+          }
+        }
+        & .lang{
+          &-button {
+            background: $color-main;
+          }
+          &-list {
+          }
+        }
+      }
+    }
+  }
+
+}

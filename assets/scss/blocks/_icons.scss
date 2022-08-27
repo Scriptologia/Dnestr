@@ -1,0 +1,42 @@
+@mixin icon-i($name) {
+  background-image: url('../images/icons/#{$name}');
+}
+@mixin icon-li($name) {
+  @include before-prefix (mask, url('../images/icons/#{$name}')) ;
+  @include before-prefix (  mask-size, contain) ;
+  @include before-prefix (  mask-repeat, no-repeat) ;
+}
+
+[class*="icon-i"] {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+[class*="icon-li"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-i-lupa { @include icon-li('lupa.svg'); }
+.icon-i-facebook { @include icon-li('facebook.svg'); }
+.icon-i-instagram { @include icon-li('instagram.svg'); }
+.icon-i-telegram { @include icon-li('telegram.svg'); }
+.icon-i-youtube { @include icon-li('youtube.svg'); }
+.icon-i-arrow-left { @include icon-li('arrow-left.svg'); }
+.icon-i-arrow-right { @include icon-li('arrow-right.svg'); }
+.icon-i-pointer { @include icon-li('pointer.svg'); }
+.icon-i-phone { @include icon-li('phone.svg'); }
+.icon-i-email { @include icon-li('email.svg'); }
+.icon-i-map { @include icon-li('map.svg'); }
+
+
+.icon-i-climat { @include icon-li('climat.svg'); }
+.icon-i-economic { @include icon-li('economic.svg'); }
+.icon-i-house { @include icon-li('house.svg'); }
+.icon-i-peoples { @include icon-li('peoples.svg'); }
+.icon-i-schoole { @include icon-li('schoole.svg'); }
+.icon-i-squar { @include icon-li('squar.svg'); }
+.icon-i-student { @include icon-li('student.svg'); }

@@ -1,0 +1,47 @@
+form.inline-form {
+  display: flex;
+  flex-wrap: nowrap;
+  background: $color-blue2;
+  border-radius: $radius2;
+  z-index: 1;
+  width: fit-content;
+  @include exlg {
+    margin:0 auto;
+  }
+  @include sd {
+    margin:0;
+  }
+}
+
+input[type=email] {
+  width: 180px;
+  height: 40px;
+  background-color: $color-blue2;
+  border-radius: $radius2 0 0 $radius2;
+  font-size:.583em;
+  padding: .583em 1.4em;
+  @include sd {
+    max-width: 140px;
+    width: auto;
+  }
+  &:hover {
+    color:blue;
+    border-color: blue;
+  }
+}
+
+button[type=submit] {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(91.97deg, #94BBFA 4.77%, #7ACED3 48.77%, #F0D835 94.35%);;
+  border-radius: $radius2;
+  color: $color-main;
+  text-transform: uppercase;
+  @include sd {
+    max-width: 120px;
+    width: auto;
+  }
+  &:hover {
+    background: linear-gradient(91.97deg, #94BBFA 2.77%, #7ACED3 20.77%, #F0D835 90.35%);
+  }
+}

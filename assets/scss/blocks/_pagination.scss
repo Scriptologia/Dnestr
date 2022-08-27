@@ -1,0 +1,48 @@
+.pagination {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  & .arrow {
+    &_back, &_forward {
+      display: flex;
+      align-items: center;
+      margin:.334em;
+      & i {
+        background: $color-blue2;
+        &:hover {
+          background: $color-blue;
+        }
+      }
+    }
+  }
+  & > a > i[class*="icon-i"]{
+    width:.667em;
+    height:.667em;
+  }
+  &_block {
+    display: flex;
+    &_item {
+      width: 2.083em;
+      height: 2.083em;
+      margin:.208em;
+      background: $color-blue2;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      &:hover {
+        background: $color-blue;
+      }
+      & > a {
+        font-size: .583em;
+      }
+      &.active{
+        border: double 4px transparent;
+        background: linear-gradient(white, white), linear-gradient(91.97deg, #94BBFA 4.77%, #7ACED3 48.77%, #F0D835 94.35%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+      }
+    }
+  }
+}

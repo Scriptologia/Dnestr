@@ -1,0 +1,100 @@
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include exlg {
+    justify-content: space-around;
+  }
+  &_item {
+    margin-bottom: 1rem;
+    width: 280px;
+    position: relative;
+    &:hover {
+      transform:scale(1.05);
+      & img {
+        box-shadow: 0px 0px .5em rgb(32 43 72 / 85%);
+      }
+    }
+    & > .lable {
+      position: absolute;
+      background-color: $color-blue;
+      width: 85px;
+      height: 58px;
+      top: 0;
+      left: 0;
+      border-radius: $radius2 0 $radius2 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      &:after {
+        content: "";
+        right: -27px;
+        top: 0;
+        position: absolute;
+        border-top: 52px solid $color-blue;
+        border-right: 33px solid transparent;
+      }
+      & > time {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-main;
+      }
+    }
+    & > img {
+      border-radius: $radius2;
+      box-shadow: 0px 0px .5em rgba(32, 43, 72, 0.15);
+      margin-bottom:20px;
+    }
+    & > h4 {
+      font-weight: 700;
+      line-height: 1.167em;
+      margin-bottom:16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    &_header {
+      line-height: 1.4em;
+      margin-bottom: .75em;
+    }
+    &_link {
+      color:$color-blue;
+      text-transform: uppercase;
+      &:hover {
+        color:$main-font-color;
+      }
+    }
+    & > p{
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &_block {
+      box-shadow: 0px 0px .5em rgba(32, 43, 72, 0.15);
+      border-radius: $radius2;
+      padding: 1.25em;
+      & > h4 {
+        font-weight: 700;
+        line-height: 1em;
+        margin-bottom: 0.833em;
+      }
+      &_list {
+        margin-left: 0.4em;
+        & li {
+          font-size: .583em;
+          &:before {
+            content: "·";
+            font-size: 2em;
+            vertical-align: middle;
+            line-height: 1em;
+            margin-right: 0.3em;
+          }
+        }
+      }
+    }
+
+  }
+}

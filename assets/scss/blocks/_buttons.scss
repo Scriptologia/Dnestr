@@ -1,0 +1,58 @@
+button {
+
+}
+.btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(91.97deg, #94BBFA 4.77%, #7ACED3 48.77%, #F0D835 94.35%);
+  border-radius: $radius2;
+  color:$color-main;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: linear-gradient(91.97deg, #94BBFA 2.77%, #7ACED3 20.77%, #F0D835 90.35%);
+  }
+}
+
+.button-link {
+  height:50px;
+  width: 280px;
+  @include sd {
+    width:260px;
+  }
+}
+.menu-button {
+  height:40px;
+  width: 280px;
+  @include sd {
+    width:260px;
+  }
+}
+
+.gradient-button {
+  text-transform: uppercase;
+  line-height: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2.5em;
+  font-size: .583em;
+  width: 11em;
+  //height: 3em;
+  border: double 4px transparent;
+  background: linear-gradient(white, white), linear-gradient(91.97deg, #94BBFA 4.77%, #7ACED3 48.77%, #F0D835 94.35%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  &:hover{
+    background: linear-gradient(white, white), linear-gradient(341deg, #94BBFA 10%, #7ACED3 30%, #F0D835 80%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+}
